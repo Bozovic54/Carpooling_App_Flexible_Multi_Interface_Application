@@ -1,0 +1,344 @@
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header_container{
+    height: 72px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 10; 
+}
+.header{
+    display: flex;
+    width: 80%;
+}
+.header_left{
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    align-items: center;
+}
+.header_left a{
+    color:dodgerblue;
+    text-decoration:none;
+    font-size: x-large;   
+}
+.header_left a img{
+    vertical-align: text-bottom;
+    margin-right: 6px;
+
+}
+.header_right{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    align-items: center;
+}
+.header_right a{
+    color:dodgerblue;
+    text-decoration:none;
+    font-size: large;   
+}
+.header_right a img{
+    vertical-align:bottom;
+    margin-right: 6px;
+}
+.search_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 60px;
+    background-color: #ffffff;
+    z-index: 9;
+    padding: 10px 0;
+}
+.horizontal-form {
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 16px;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);;
+    position: relative;
+
+}
+
+.horizontal-form label {
+    font-size: 20px;
+    margin-right: 6px;
+    width: 20%;
+    
+}
+.horizontal-form input#date{
+    margin-right: 60px;
+}
+
+.horizontal-form select,
+.horizontal-form input,
+.horizontal-form button {
+    border: none;
+    padding: 5px 2px;
+    font-size: 14px;
+    font-style: none;
+}
+
+.horizontal-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 110px;
+}
+
+.horizontal-form button:hover {
+    background-color: #0056b3;
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    background-color: #fafafa;
+    margin-top: 120px; 
+    height:100vh;
+}
+.aside {
+    width: 24%;
+    padding: 35px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: none;
+}
+
+.aside h3 {
+    font-size: 1.6em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.filters {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 30px;
+}
+
+.filter-item input[type="radio"] {
+    margin: 0;
+    background-color: #0056b3;
+}
+
+.filter-item label {
+    flex-grow: 1;
+    color: #555;
+    font-size: 1.2em;
+    
+}
+
+.icon {
+    font-size: 1.4em;
+    color: #888;
+    margin-left: auto;
+}
+.separator {
+    border: none;
+    height: 7px;
+    background-color: #e8e7e7;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.content{
+    display: none;
+    width: 60%;
+    margin-top: 20px;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px;
+    height: auto;
+}
+.rides_list {
+    width: 65%;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;  
+}
+.rides_list li {
+    background-color: #f9f9f9;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    position: relative; 
+}
+.rides_list li .ride_details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.rides_list li .ride_info {
+    font-weight: bold;
+}
+.rides_list li .ride_price {
+    color: #27ae60;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute; 
+    top: 20px;
+    right: 20px;
+}
+.rides_list li hr {
+    margin: 10px 0;
+    opacity: 0.8;
+    border: none;
+    height: 2px;
+    background-color: #b8b4b4;
+    border-radius: 3px;
+    
+}
+
+.rides_list li .user_info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.rides_list li .user_icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.rides_list li .ride_time {
+    color: #555;
+    font-size: 14px;
+}
+.rides_list li .user_name,
+.rides_list li .user_experience,
+.rides_list li .user_rating {
+    font-size: 16px;
+}
+.no_rides_message {
+    text-align: center;
+    color: gray;
+    font-size: 1.6em;
+    margin-top: 20px;
+}
+.welcome{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+.welcome_message {
+    background-color: #f4f4f9;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 90px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    height: 160px;
+}
+
+.welcome_message h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome_message p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#welcome_message button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#welcome_message button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 1344px) {
+    .horizontal-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px; 
+    }
+    .horizontal-form button {
+        width: auto; 
+        margin: 0 auto; 
+        padding: 10px 20px; 
+        position: relative; 
+    }
+}
+
+@media (max-width: 930px) {
+    .header {
+        gap: 10px;
+    }
+    .horizontal-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px; 
+    }
+    .aside, .content {
+        width: 100%;
+    }
+    .horizontal-form button {
+        width: auto;
+        margin: 0 auto;
+        padding: 10px 20px; 
+        position: relative; 
+    }
+    .welcome_message{
+        height: max-content;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        text-align: center;
+    }
+    .horizontal-form label {
+        font-size: 14px;
+    }
+    .horizontal-form button {
+        width: auto;
+        margin-top: 10px;
+        margin-left: auto; 
+        margin-right: auto;
+        padding: 10px 20px;
+        position: relative;
+    }
+}

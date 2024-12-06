@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Carpooling_App.props" />
+</Project>

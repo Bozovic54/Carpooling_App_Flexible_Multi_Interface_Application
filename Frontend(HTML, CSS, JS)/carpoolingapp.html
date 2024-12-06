@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Carpooling App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/carpoolingapp.css">
+    </head>
+    <body>
+        <div class="root">
+            <div class="header_container">
+                <div class="header">
+                    <div class="header_left">
+                        <a href="/"><img src="images/logo.png"><span>Carpooling</span></a>
+                    </div>
+                    <div class="header_right">
+                        <a href="/carpoolingapp.html"><img src="images/plus.png"><span>Objavite vožnju</span></a>
+                     </div>
+                </div>
+            </div>
+            <div class="search_container"> 
+                <form class="horizontal-form" id="search_form" onsubmit="searchRides(event)">
+                    <div class="form_group">
+
+                        <label for="departure">Mesto polaska:</label>
+                        <input type="text" list="city" id="departure" name="departure" placeholder="Polazak" required>
+                        
+                        <label for="arrival">Mesto dolaska:</label>
+                        <input type="text" list="city"  id="arrival" name="arrival" placeholder="Dolazak" required>
+                        <datalist id="city">
+                            <option value="Beograd">Beograd</option>
+                            <option value="Novi Sad">Novi Sad</option>
+                            <option value="Niš">Niš</option>
+                            <option value="Kragujevac">Kragujevac</option>
+                            <option value="Subotica">Subotica</option>
+                            <option value="Zrenjanin">Zrenjanin</option>
+                            <option value="Čačak">Čačak</option>
+                            <option value="Kraljevo">Kraljevo</option>
+                            <option value="Leskovac">Leskovac</option>
+                            <option value="Zaječar">Zaječar</option>
+                            <option value="Zlatibor">Zlatibor</option>
+                            <option value="Pančevo">Pančevo</option>
+                          </datalist>
+
+                        <label for="date">Datum:</label>
+                        <input type="date" id="date" name="date">
+
+                        <label for="passengers">Broj putnika</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+                    
+                        <button type="submit" id="search_button">Pretraga</button>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="main">
+                <div class="welcome">
+                    <div class="welcome_message" id="welcome_message">
+                        <h2>Dobrodošli u Carpooling aplikaciju!</h2>
+                        <p>Pretražite vožnje koje odgovaraju vašim potrebama. Unesite podatke za pretragu i pronađite vožnju koja vam najviše odgovara!</p>
+                        <button id="search_button_welcome">Počnite pretragu</button>
+                    </div>
+                </div>
+                <div class="aside" id="aside">
+                    <h3>Poređajte po:</h3>
+                    <div class="filters">
+                        <div class="filter-item">
+                            <input type="radio" id="earliest-departure" name="sort" />
+                            <label for="earliest-departure">Najranije vreme polaska</label>
+                            <i class="icon">🕒</i>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="latest-departure" name="sort" />
+                            <label for="latest-departure">Najkasnije vreme polaska</label>
+                            <i class="icon">🕔</i>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="lowest-price" name="sort" />
+                            <label for="lowest-price">Najniža cena</label>
+                            <i class="icon">💰</i>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="highest-price" name="sort" />
+                            <label for="highest-price">Najviša cena</label>
+                            <i class="icon">💸</i>
+                        </div>
+                    </div>
+                    <hr class="separator" />
+                    <h3>Vreme polaska:</h3>
+                    <div class="filters">
+                        <div class="filter-item">
+                            <input type="radio" id="between 6-12" name="filter" />
+                            <label for="earliest-departure">06:00-12:00</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="between 12-18" name="filter" />
+                            <label for="latest-departure">12:00-18:00</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="after 18" name="filter" />
+                            <label for="lowest-price">Posle 18:00</label>
+                        </div>
+                    </div>
+                </div>                                
+                <div class="content" id="content">
+                    <ul class= "rides_list" id="rides_list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>  
+
+        <script src="js/carpoolingapp.js"></script>
+    </body>
+</html>
